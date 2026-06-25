@@ -1,227 +1,119 @@
-# 🛡️ AuditIQ — End-to-End Audit Analytics & Continuous Controls Monitoring Platform
+# AuditIQ – Audit Analytics & Continuous Controls Monitoring
 
-> **A data-driven internal audit analytics platform that simulates how modern banks identify fraud, control failures, and compliance risks using machine learning and automated audit rules.**
+AuditIQ is a Python-based audit analytics platform that simulates how internal audit teams in financial institutions identify control weaknesses, segregation of duties (SoD) conflicts, and potentially fraudulent transactions using data analytics and machine learning.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
-![Scikit-Learn](https://img.shields.io/badge/ML-IsolationForest-green)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analytics-purple)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+The project combines data engineering, audit rules, unsupervised anomaly detection, and interactive reporting into a single workflow that supports risk-based audit planning.
 
----
-
-## 🚀 Live Demo
-
-**🌐 Streamlit Application**
+**Live Demo**
 
 https://audit-iq-ecpram8fsmtjku7kawuzte.streamlit.app/
 
 ---
 
-## 📌 Project Overview
+## Why I built this
 
-AuditIQ is an end-to-end **Internal Audit Analytics** platform inspired by enterprise audit workflows used in banking and financial institutions.
+Traditional audits often rely on manual sampling, which can miss unusual patterns hidden within large transaction datasets.
 
-The platform automatically:
+This project explores how audit teams can automate parts of that process by combining:
 
-* Generates realistic banking datasets
-* Performs ETL and data quality validation
+* Data pipelines
+* Rule-based control testing
+* Machine learning
+* Interactive dashboards
+
+The objective was to build a realistic portfolio project that reflects the type of analytical workflows used by internal audit and operational risk teams.
+
+---
+
+## Features
+
+* Generates realistic banking transaction and employee access datasets
+* Performs ETL and data standardization
 * Detects Segregation of Duties (SoD) violations
-* Identifies suspicious financial transactions using Machine Learning
+* Identifies anomalous transactions using Isolation Forest
 * Calculates department-level risk scores
-* Visualizes audit findings in an interactive Streamlit dashboard
-
-The project demonstrates how audit analytics can support **risk-based audit planning** through automation and explainable machine learning.
+* Visualizes findings through an interactive Streamlit dashboard
 
 ---
 
-# ✨ Key Features
+## Project Structure
 
-✅ Automated mock banking data generation
-
-✅ ETL data integration pipeline
-
-✅ Segregation of Duties (SoD) conflict detection
-
-✅ Isolation Forest anomaly detection
-
-✅ Department-wise risk scoring engine
-
-✅ Interactive Streamlit dashboard
-
-✅ Risk Leaderboard
-
-✅ Drill-down investigation panels
-
-✅ KPI cards & interactive filters
-
----
-
-# 🏗 System Architecture
-
-```
-Mock Data Generator
-        │
-        ▼
-ETL Pipeline
-        │
-        ▼
-Master Audit Dataset
-        │
- ┌──────┴────────┐
- ▼               ▼
-SoD Engine   ML Anomaly Detection
- └──────┬────────┘
-        ▼
- Risk Scoring Engine
-        ▼
- Streamlit Dashboard
-```
-
----
-
-# 📂 Repository Structure
-
-```
+```text
 audit-iq/
-│
 ├── dashboard/
 │   └── app.py
-│
 ├── data/
-│
 ├── src/
 │   ├── generate_data.py
 │   ├── pipeline.py
 │   ├── sod_engine.py
 │   ├── anomaly_engine.py
 │   └── risk_scoring.py
-│
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-# ⚙️ Technology Stack
+## Workflow
 
-### Programming
+```
+Raw Data
+    │
+    ▼
+ETL Pipeline
+    │
+    ▼
+Master Dataset
+    │
+ ┌──┴─────────────┐
+ ▼                ▼
+SoD Checks   Anomaly Detection
+ └──────┬─────────┘
+        ▼
+Risk Scoring
+        ▼
+Streamlit Dashboard
+```
+
+---
+
+## Technologies Used
 
 * Python
-
-### Data Analytics
-
 * Pandas
 * NumPy
-
-### Machine Learning
-
-* Scikit-Learn
-* Isolation Forest
-
-### Visualization
-
-* Streamlit
+* Scikit-learn
 * Plotly
-
-### Data Generation
-
+* Streamlit
 * Faker
 
 ---
 
-# 🔄 Audit Workflow
+## Running the Project
 
-### 1️⃣ Generate Mock Banking Data
-
-Creates:
-
-* Vendor Master
-* Employee Access Matrix
-* Corporate Transactions
-
----
-
-### 2️⃣ ETL Pipeline
-
-* Data Cleaning
-* Data Validation
-* Data Integration
-* Standardization
-
----
-
-### 3️⃣ SoD Detection
-
-Identifies employees with conflicting permissions such as:
-
-* Create Vendor + Approve Payment
-* Edit Invoice + Approve Payment
-
----
-
-### 4️⃣ ML-Based Fraud Detection
-
-Uses **Isolation Forest** to identify suspicious transactions based on engineered audit features.
-
-Examples include:
-
-* Threshold splitting
-* Duplicate payments
-* Weekend approvals
-* Late-night approvals
-
----
-
-### 5️⃣ Risk Scoring
-
-Departments are ranked using a weighted score:
-
-* **45% Access Control Risk**
-* **45% Transaction Anomaly Risk**
-* **10% Transaction Volume**
-
----
-
-### 6️⃣ Interactive Dashboard
-
-The Streamlit application provides:
-
-* Executive KPI Cards
-* Risk Leaderboard
-* Interactive Charts
-* Department Filters
-* SoD Violations
-* Suspicious Transactions
-* Audit Evidence Tables
-
----
-
-# ▶️ Running the Project
-
-Clone the repository
-
-```bash
-git clone https://github.com/Abdulbasith0512/Audit-IQ.git
-```
-
-Install dependencies
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the pipeline
+Generate the datasets:
 
 ```bash
 python src/generate_data.py
+```
+
+Run the analytical pipeline:
+
+```bash
 python src/pipeline.py
 python src/sod_engine.py
 python src/anomaly_engine.py
 python src/risk_scoring.py
 ```
 
-Launch the dashboard
+Launch the dashboard:
 
 ```bash
 streamlit run dashboard/app.py
@@ -229,54 +121,35 @@ streamlit run dashboard/app.py
 
 ---
 
-# 📊 Dashboard Preview
+## Dashboard
 
-*(Add screenshots here after deployment.)*
+The dashboard provides:
 
-Example:
-
-```
-dashboard_images/
-    home.png
-    risk_leaderboard.png
-    anomalies.png
-```
+* Department-wise risk rankings
+* KPI summary cards
+* Segregation of Duties violations
+* Anomaly investigation tables
+* Interactive filtering using Streamlit widgets
 
 ---
 
-# 🎯 Business Value
+## Possible Improvements
 
-AuditIQ demonstrates how audit analytics can help organizations:
+Some areas I would extend in a future version include:
 
-* Detect fraud earlier
-* Reduce manual audit effort
-* Prioritize high-risk departments
-* Strengthen internal controls
-* Support continuous auditing
-* Improve compliance monitoring
-
----
-
-# 🚀 Future Enhancements
-
-* Role-based authentication
-* Real-time transaction monitoring
-* SQL database integration
-* REST API services
-* Predictive fraud scoring
-* AI-powered audit report generation
-* Cloud deployment with Docker & Kubernetes
+* Database-backed storage (PostgreSQL)
+* Real-time transaction ingestion
+* User authentication
+* REST API integration
+* Scheduled audit jobs
+* Model monitoring and retraining
 
 ---
 
-# 👨‍💻 Author
+## Author
 
 **Abdul Basith Syed**
 
-B.Tech Computer Science | Data Science | Machine Learning | Full Stack Development
+B.Tech Computer Science Engineering
 
-GitHub: https://github.com/Abdulbasith0512
-
----
-
-⭐ If you found this project useful, consider giving it a Star!
+Interested in Data Science, Machine Learning, and Audit Analytics.
