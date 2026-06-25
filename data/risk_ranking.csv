@@ -1,0 +1,6 @@
+business_unit,total_transactions,sod_violations,anomaly_count,total_anomaly_score,risk_score,risk_explanation
+Corporate Banking,577,20,18,13.8888,69.58,Critical access risk (20 SoD violations) | Elevated transaction anomalies (18 alerts) | Overall Profile: MEDIUM RISK. Target for upcoming audit cycle.
+Wealth Management,614,20,12,9.7964,53.6,Critical access risk (20 SoD violations) | Elevated transaction anomalies (12 alerts) | Overall Profile: MEDIUM RISK. Target for upcoming audit cycle.
+Global Markets,593,13,23,17.2895,48.72,"Elevated access risk (13 SoD violations) | Severe transaction anomalies (23 alerts, total severity: 17.3) | Overall Profile: MEDIUM RISK. Target for upcoming audit cycle."
+Investment Banking,620,14,17,13.6842,39.78,Elevated access risk (14 SoD violations) | Elevated transaction anomalies (17 alerts) | Overall Profile: LOW RISK. Monitor routine controls.
+Retail Banking,596,13,20,15.6187,39.38,Elevated access risk (13 SoD violations) | Elevated transaction anomalies (20 alerts) | Overall Profile: LOW RISK. Monitor routine controls.

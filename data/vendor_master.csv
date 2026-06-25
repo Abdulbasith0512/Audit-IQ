@@ -1,0 +1,101 @@
+vendor_id,vendor_name,business_unit,registration_date,risk_category
+V0001,"Lam, Davis and Jenkins",Investment Banking,2025-12-04,high
+V0002,"Yates, Marquez and Warner",Retail Banking,2025-04-26,normal
+V0003,Romero-Lopez,Wealth Management,2025-03-08,normal
+V0004,"Jarvis, Perez and Hill",Global Markets,2023-10-04,high
+V0005,"Kirby, Wade and Hernandez",Corporate Banking,2025-10-06,high
+V0006,"Schmidt, Harris and Mason",Investment Banking,2023-07-04,normal
+V0007,"Nguyen, Martinez and Mcclure",Global Markets,2024-07-19,normal
+V0008,"Downs, Richards and Torres",Global Markets,2025-08-19,normal
+V0009,Parker Inc,Global Markets,2024-12-28,normal
+V0010,"Norman, Levy and Daniels",Corporate Banking,2026-01-29,normal
+V0011,Deleon-Collins,Investment Banking,2024-12-15,normal
+V0012,Perez LLC,Wealth Management,2024-03-30,normal
+V0013,Smith LLC,Retail Banking,2024-12-19,normal
+V0014,Cooper-Spears,Wealth Management,2024-05-19,normal
+V0015,"Little, Lynn and Luna",Retail Banking,2025-08-08,normal
+V0016,"Martinez, Palmer and Elliott",Corporate Banking,2025-02-22,high
+V0017,Bates-Williams,Retail Banking,2025-09-22,normal
+V0018,Miller Ltd,Investment Banking,2025-12-03,normal
+V0019,"Martin, Davis and Williams",Global Markets,2026-02-19,normal
+V0020,Ali-Edwards,Corporate Banking,2024-12-08,high
+V0021,Willis PLC,Retail Banking,2024-01-03,normal
+V0022,Hernandez-Marsh,Global Markets,2025-06-23,normal
+V0023,"Fleming, Taylor and Graham",Retail Banking,2025-09-25,normal
+V0024,Saunders-Johnson,Investment Banking,2024-02-12,high
+V0025,"Wilson, Bryant and Thomas",Wealth Management,2025-08-12,normal
+V0026,"Singleton, Hodge and Perkins",Investment Banking,2025-09-22,normal
+V0027,Hall Group,Investment Banking,2026-02-15,normal
+V0028,Tyler Inc,Corporate Banking,2024-06-19,normal
+V0029,Watkins PLC,Retail Banking,2024-07-09,normal
+V0030,Wallace Group,Retail Banking,2025-03-17,normal
+V0031,Carey-May,Retail Banking,2026-02-21,normal
+V0032,Perez-Brown,Investment Banking,2023-10-06,normal
+V0033,Blackwell PLC,Wealth Management,2024-07-08,normal
+V0034,Wallace-Butler,Wealth Management,2024-09-24,normal
+V0035,"Lang, Lopez and Ritter",Corporate Banking,2025-04-24,normal
+V0036,"Garza, Clements and Mccall",Global Markets,2026-03-26,normal
+V0037,Miller-Gonzales,Retail Banking,2026-05-01,normal
+V0038,Brown-Romero,Investment Banking,2026-05-30,normal
+V0039,Gillespie and Sons,Investment Banking,2025-04-30,normal
+V0040,Johnson-Joyce,Corporate Banking,2024-09-11,normal
+V0041,"Ingram, Soto and Brown",Wealth Management,2023-09-12,normal
+V0042,Mcdonald Ltd,Global Markets,2026-03-07,normal
+V0043,Watson and Sons,Retail Banking,2024-02-28,normal
+V0044,"Briggs, Turner and Flores",Corporate Banking,2025-06-01,normal
+V0045,Humphrey PLC,Corporate Banking,2026-02-02,normal
+V0046,Garrett-Martinez,Wealth Management,2026-06-14,normal
+V0047,Simpson Group,Global Markets,2024-06-09,normal
+V0048,Wagner-Saunders,Global Markets,2024-10-29,normal
+V0049,Burns PLC,Global Markets,2025-12-28,normal
+V0050,Schneider-Mcmillan,Wealth Management,2025-03-31,normal
+V0051,Parker-Gonzalez,Wealth Management,2023-10-10,normal
+V0052,"Smith, Houston and Lopez",Investment Banking,2023-07-24,normal
+V0053,Williams-Smith,Investment Banking,2023-07-01,normal
+V0054,Barr and Sons,Wealth Management,2025-09-16,normal
+V0055,"Newman, Perez and Miller",Corporate Banking,2024-10-27,normal
+V0056,"Cooper, Frey and Dixon",Corporate Banking,2026-04-29,normal
+V0057,Gill Inc,Corporate Banking,2024-05-06,normal
+V0058,Walker-Schultz,Global Markets,2025-02-18,normal
+V0059,"Weeks, Porter and Parks",Investment Banking,2023-12-05,normal
+V0060,Preston LLC,Investment Banking,2024-10-24,normal
+V0061,Gonzales-Moss,Global Markets,2025-09-06,normal
+V0062,Gibson-Barnes,Retail Banking,2023-12-18,normal
+V0063,Campbell-Burton,Corporate Banking,2025-01-24,normal
+V0064,Robinson PLC,Investment Banking,2026-03-03,normal
+V0065,Webb-Ramirez,Retail Banking,2023-10-17,normal
+V0066,Phillips-Rocha,Wealth Management,2024-11-15,normal
+V0067,Roberts-Frazier,Investment Banking,2023-07-26,normal
+V0068,"Bird, Pierce and Powell",Retail Banking,2025-06-08,normal
+V0069,Hall PLC,Global Markets,2023-08-12,normal
+V0070,"Garcia, Gray and Wade",Wealth Management,2025-03-15,normal
+V0071,Arnold-Bolton,Wealth Management,2023-10-29,normal
+V0072,"Mendoza, Walker and Pearson",Global Markets,2023-12-12,normal
+V0073,Johnston-Hayes,Global Markets,2024-08-21,normal
+V0074,Morrison-Coleman,Investment Banking,2023-08-07,normal
+V0075,Molina-Novak,Retail Banking,2024-04-24,normal
+V0076,Pennington-Miller,Retail Banking,2024-06-28,normal
+V0077,Griffith Ltd,Wealth Management,2026-05-10,normal
+V0078,Garcia PLC,Investment Banking,2026-04-03,high
+V0079,"Sherman, Scott and Chan",Corporate Banking,2025-07-16,normal
+V0080,"Pineda, Oconnor and Perez",Global Markets,2025-06-17,normal
+V0081,Melendez-Hernandez,Wealth Management,2026-04-11,normal
+V0082,Castillo-Smith,Global Markets,2025-12-13,normal
+V0083,"Stone, Roberts and Vaughan",Global Markets,2025-05-18,normal
+V0084,Ford-May,Corporate Banking,2025-01-02,normal
+V0085,Thomas and Sons,Global Markets,2025-03-23,normal
+V0086,"Butler, Miller and King",Wealth Management,2024-11-03,normal
+V0087,Barnes and Sons,Corporate Banking,2026-01-17,normal
+V0088,Oneill-Mcbride,Retail Banking,2024-06-22,normal
+V0089,Gonzalez Ltd,Global Markets,2024-08-27,normal
+V0090,Price Group,Wealth Management,2026-02-22,normal
+V0091,Gibson-Herrera,Retail Banking,2024-12-27,high
+V0092,Mitchell-Ryan,Global Markets,2024-04-27,normal
+V0093,Chambers-Robbins,Wealth Management,2024-07-22,high
+V0094,Patel-Anderson,Investment Banking,2024-11-01,normal
+V0095,Robbins-Flores,Investment Banking,2025-01-02,normal
+V0096,"Duncan, Porter and Martinez",Investment Banking,2024-11-21,normal
+V0097,"Dickerson, Poole and Blackburn",Retail Banking,2025-01-02,normal
+V0098,Harris Ltd,Wealth Management,2024-04-29,normal
+V0099,Powers LLC,Global Markets,2024-09-02,normal
+V0100,"Jones, Fowler and Floyd",Wealth Management,2026-05-06,normal
