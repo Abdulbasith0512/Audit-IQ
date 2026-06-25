@@ -58,22 +58,82 @@ audit-iq/
 ## Workflow
 
 ```
-Raw Data
-    │
-    ▼
-ETL Pipeline
-    │
-    ▼
-Master Dataset
-    │
- ┌──┴─────────────┐
- ▼                ▼
-SoD Checks   Anomaly Detection
- └──────┬─────────┘
-        ▼
-Risk Scoring
-        ▼
-Streamlit Dashboard
+## Architecture & Data Flow
+
+```text
+                      +-----------------------------+
+                      |   1. MOCK DATA GENERATOR    |
+                      |     (generate_data.py)      |
+                      +--------------+--------------+
+                                     |
+             +-----------------------+-----------------------+
+             |                       |                       |
+             v                       v                       v
+     [ transactions.csv ]    [ employee_access.csv ]  [ vendor_master.csv ]
+     (3,000 corporate spend  (200 employee roles &    (100 approved vendors &
+      records + anomalies)    access permissions)      risk categories)
+             |                       |                       |
+             |                       +-----------+           |
+             |                                   |           |
+             v                                   v           v
++------------+------------+            +--------+-----------+-------+
+|    2. ETL DATA PIPELINE |            | 3. SEGREGATION OF DUTIES   |
+|      (pipeline.py)      |            |         ENGINE             |
++------------+------------+            |     (sod_engine.py)        |
+             |                         +--------+-------------------+
+             |                                   |
+             v                                   v
+    [ master_table.csv ]               [ sod_violations.csv ]
+    (Joined, standardized,             (Employees holding conflicting
+     and cleaned database)              privileges, e.g. vendor create
+             |                          + payment approve)
+             |                                   |
+             v                                   |
++------------+------------+                      |
+| 4. ANOMALY DETECTION    |                      |
+|        ENGINE           |                      |
+|  (anomaly_engine.py)    |                      |
++------------+------------+                      |
+             |                                   |
+             v                                   v
+      [ anomalies.csv ]                          |
+      (Isolation Forest flags                    |
+       & plain-English reasons)                  |
+             |                                   |
+             +-----------------------+-----------+
+                                     |
+                                     v
+                       +-------------+-------------+
+                       |   5. RISK SCORING ENGINE  |
+                       |      (risk_scoring.py)    |
+                       +-------------+-------------+
+                                     |
+                                     v
+                            [ risk_ranking.csv ]
+                            (Business units ranked by
+                             weighted risk scores)
+                                     |
+                                     v
+                       +-------------+-------------+
+                       |    6. STREAMLIT APP       |
+                       |     (dashboard/app.py)    |
+                       +---------------------------+
+```
+
+### Pipeline Summary
+
+1. **Mock Data Generator** creates realistic banking datasets containing transactions, employee access records, and vendor information with intentionally injected control failures and anomalies.
+
+2. **ETL Pipeline** cleans, standardizes, and integrates the datasets into a consolidated audit dataset.
+
+3. **Segregation of Duties Engine** evaluates employee permissions against predefined control rules and identifies conflicting access rights.
+
+4. **Anomaly Detection Engine** applies an Isolation Forest model to identify unusual transaction patterns and generates explainable audit findings.
+
+5. **Risk Scoring Engine** combines SoD violations, anomaly counts, and transaction volume into weighted department-level risk scores.
+
+6. **Streamlit Dashboard** presents the results through interactive visualizations, KPI cards, risk rankings, and drill-down investigation tables.
+
 ```
 
 ---
