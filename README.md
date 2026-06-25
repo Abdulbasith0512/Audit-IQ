@@ -194,25 +194,3 @@ A self-service analytics console designed for chief auditors:
 *   **Drill-Down Panels:** Granular views of detailed SoD violations, anomalous transactions (with risk score progress bars), and a searchable ledger log.
 
 ---
-
-## 💬 Interview Quick-Reference Guide
-
-Be prepared to answer these technical and business questions in your data science / internal audit interview:
-
-### Q1: Why did you choose Isolation Forest instead of a standard classification model?
-> "In transaction auditing, we deal with **unlabeled data** and **extreme class imbalance**. True fraud is rare (often < 0.1%) and we rarely have a set of labeled examples. Standard supervised models (like Random Forests or XGBoost) would fail or overfit. 
-> 
-> Isolation Forest is an unsupervised algorithm designed specifically for outlier detection. Instead of profiling normal transactions, it isolates anomalies. It does this by building an ensemble of isolation trees. Because anomalies have distinct values, they require fewer splits to isolate and appear closer to the root of the trees. It is computationally efficient and requires no feature scaling."
-
-### Q2: Why did you normalize the variables in the Risk Scoring Engine?
-> "Volume is measured in hundreds of transactions, whereas SoD violations and anomalies are measured in tens. If we plugged these raw numbers directly into a weighted formula, the volume would completely dominate the risk score. We normalized the metrics using **MinMax Scaling** so that all metrics sit on a standardized `[0, 1]` scale before applying our weights. This ensures that a department with massive volume but perfect controls isn't incorrectly flagged as high-risk."
-
-### Q3: Why is Segregation of Duties (SoD) checking critical in a bank?
-> "SoD is the core of preventative control in financial institutions. It ensures that no single individual can complete a transaction cycle without independent oversight. 
-> 
-> If an analyst can both create a vendor and approve payments to that vendor, they can execute fictitious vendor fraud. By writing a rule checker to flag these access anomalies, we catch system access vulnerabilities *before* they translate into active fraudulent payments."
-
-### Q4: How would you upgrade this platform in a production environment?
-> 1.  **Transition to Supervised Learning:** If we get feedback from auditors (i.e. 'audited and found true issue' labels), we can upgrade the weighted formula to a **supervised Logistic Regression model**, which allows us to mathematically optimize our risk weights and evaluate feature coefficients for audit explainability.
-> 2.  **Incremental Pipelines (Spark/Airflow):** Run the ETL and model training on a weekly or daily schedule using Apache Airflow, processing streaming transaction files directly from the bank's core ledger database.
-> 3.  **Model Monitoring:** Track feature drift and prediction distributions over time to monitor for changes in employee spending patterns and prevent model degradation.
